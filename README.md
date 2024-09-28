@@ -54,6 +54,19 @@ The analysis involved executing several SQL queries to provide insight into impo
 5. What are the differences in income share between the top 10% and bottom 10% populations?
 
 ```SQL
+SELECT
+	Country,
+	Year,
+	Top_10_Income_Share
+FROM 
+	GlobalIncomeProject..global_income_inequality
+WHERE
+	Year = '2023'
+ORDER BY
+	Top_10_Income_Share DESC
+```
+ 
+```SQL
 SELECT 
 	Country, 
 	AVG(Gini_Index) AS AverageGini
